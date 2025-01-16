@@ -1,4 +1,27 @@
-package PACKAGE_NAME;
+public class EmployeeDetails
+{
+    String name;
+    int id;
+    double salary;
+    EmployeeDetails(String name,int id ,double salary)//make default constructor Employee
+    {
+        this.name=name;
 
-public class EmployeeDetails {
+        this.id=id;
+        this.salary=salary;
+    }
+
+    void displayDetail()//this method to display the detail of employee
+    {
+        System.out.println("Employee name :"+name);
+        System.out.println("Employee id :"+id);
+        System.out.println("Employee salary :"+salary);
+    }
+    public static void main(String[] args)//create an instance or object of the Employee
+    {
+
+        EmployeeDetails emp=new EmployeeDetails( "Aryan", 211033, 4500000.90);
+        emp.displayDetail();
+    }
 }
+
