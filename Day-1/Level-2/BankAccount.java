@@ -4,8 +4,8 @@ class BankAccount {
     Scanner sc = new Scanner(System.in); // object of scanner class
     // created the attributes of BankAccount
     // keeping attributes private ensures data security
-    private String accountHolder, accountNumber;
-    private double balance = 0; // initial balance
+    private static String accountHolder, accountNumber;
+    private  double balance = 20000000; // initial balance
 
 
     // method for depositing money
@@ -44,24 +44,40 @@ class BankAccount {
         // created an integer variable to let user choose the functionality, that user wants to use
         int functionality;
 
-        System.out.println("Choose: \n1 => for depositing money\n2 => for withdrawing money\n3 => for displaying account balance");
-        functionality = sc.nextInt(); // taking input for functionality
+         // taking input for functionality
 
         BankAccount account = new BankAccount(); // object of BankAccount class
+        while (true)
+        {
 
-        switch (functionality)
-        { // calling function according to chosen functionality
-            case 1 :
-                account.depositeMoney();
-                break;
-            case 2 :
-                account.withdrawMoney();
-                break;
-            case 3 :
-                account.viewBalance();
-                break;
-            default :
-                System.out.println("not a valid choice");
+            try {
+                System.out.println("Choose: \n1 => for depositing money\n2 => for withdrawing money\n3 => for displaying account balance\nEnter any Alphabet  => for Exit");
+                functionality = sc.nextInt();
+                switch (functionality)
+                { // calling function according to chosen functionality
+                    case 1:
+                        account.depositeMoney();
+                        break;
+                    case 2:
+                        account.withdrawMoney();
+                        break;
+                    case 3:
+                        account.viewBalance();
+                        break;
+                    default :
+                        System.out.println("Enter the valid input");
+                        break;
+                }
+            }
+
+                catch (Exception e)
+                {
+                    System.out.println("Have a good Day");
+                    break;
+                }
+
+
+
         }
     }
 }
