@@ -51,7 +51,7 @@ public class TicketBooking {
         boolean isBooked = tb.bookTicket(movieName, seatNumber);
 
         // displaying the ticket if booked
-        mt.displayTicket(isBooked);
+        tb.displayTicket(isBooked);
 
     }
 }
