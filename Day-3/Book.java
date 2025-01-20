@@ -19,7 +19,14 @@ public class Book
     }
     public static void main(String [] args)
     {
-        Book b=new Book("The life of aryan","Aryan",001);
+        Book b=new Book("The life of aryan","Aryan",1);
+        if(b instanceof Book)
+        {
+            System.out.println("Yes the b is instance of Book");
+        }
+        else {
+            System.out.println("no  b is not the instance of Book");
+        }
         b.displayLibraryName();
         b.getdata();
 
