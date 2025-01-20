@@ -1,10 +1,10 @@
-public class UniversityManagement
+public class Student
 {
     static  final String universityName="Technocrats Institute of technology";
     static int count=0;
     String name ,grade;
     final int rollNo;
-    UniversityManagement(String name ,String grade,int rollNo)
+    Student(String name ,String grade,int rollNo)
     {
         this.name=name;
         this.grade=grade;
@@ -23,8 +23,8 @@ public class UniversityManagement
 
     public static void main(String [] args)
     {
-        UniversityManagement um=new UniversityManagement("Aryan","A",211033);
-        if(um instanceof UniversityManagement)
+        Student um=new Student("Aryan","A",211033);
+        if(um instanceof Student)
         {
             System.out.println("Yes the um is instance of University management");
         }
